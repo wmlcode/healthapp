@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import ru.lanit.healthapp.dto.UserDTO;
 import ru.lanit.healthapp.model.User;
 
 @Repository
@@ -55,7 +56,7 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public void update(User user) {
 		Session session = this.sessionFactory.openSession();
-		User persistentUser = (User) session.load(User.class, new Integer(user.getId()));
+		User persistentUser = session.load(User.class, new Integer(user.getId()));
 		Transaction tx = session.beginTransaction();
 		persistentUser.setEmail(user.getEmail());
 		persistentUser.setPassword(user.getPassword());

@@ -38,7 +38,7 @@ public class DoctorServiceImpl implements DoctorService {
 
 	@Override
 	public Doctor findByUserEmailAddress(String email) {
-		User user = null;
+		User user;
 		try {
 			user = userService.getByEmail(email);
 		} catch (Exception e) {
@@ -57,11 +57,11 @@ public class DoctorServiceImpl implements DoctorService {
 	}
 
 	@Override
-	public void addDoctor(User user) {
+	public void addDoctor(User user, String specialityCode) {
 		if(user.getRole() == 1) {
 			Doctor doctor = new Doctor();
 			doctor.setUser(user);
-			doctor.setSpecialityCode("PHYSICIAN");
+			doctor.setSpecialityCode(specialityCode);
 			doctorDAO.save(doctor);
 		}
 	}

@@ -20,5 +20,5 @@ public interface DoctorService {
 	
 	Doctor findByUserId(int userId);
 
-	void addDoctor(User user);
+	void addDoctor(User user, String specialityCode);
 }

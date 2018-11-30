@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
+import ru.lanit.healthapp.dto.UserDTO;
 import ru.lanit.healthapp.model.User;
 import ru.lanit.healthapp.helpers.ExecutionStatus;
 import ru.lanit.healthapp.services.DoctorService;
@@ -43,7 +44,7 @@ public class UserAccountController {
 	}
 	
 	@PostMapping(value="/signup")
-	public ExecutionStatus processSignup(ModelMap model, @RequestBody User reqUser) {
+	public ExecutionStatus processSignup(ModelMap model, @RequestBody UserDTO reqUser) {
 		User user = null;
 		try {
 			user = userService.doesUserExist(reqUser.getEmail());
@@ -65,11 +66,12 @@ public class UserAccountController {
 		user.setAge(reqUser.getAge());
 		user.setGender(reqUser.getGender());
 		user.setRole(reqUser.getRole());
-		User persistedUser = userService.save(user);
-		//
-		// Add entry in doctor table if user is a doctor
-		//
-		docService.addDoctor(user);
+		userService.save(user);
+
+		// If user is a doctor?
+		if (user.getRole() == 1) {
+			docService.addDoctor(user, reqUser.getSpecialityCode());
+		}
 		
 		return new ExecutionStatus("USER_ACCOUNT_CREATED", "User account successfully created");
 	}
