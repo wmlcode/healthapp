@@ -3,25 +3,6 @@ DROP DATABASE IF EXISTS `healthapp`;
 CREATE DATABASE `healthapp`;
 USE `healthapp`;
 
-DROP TABLE IF EXISTS `ClientDetails`;
-CREATE TABLE `ClientDetails` (
-  `appId` varchar(255) NOT NULL,
-  `resourceIds` varchar(255) DEFAULT NULL,
-  `appSecret` varchar(255) DEFAULT NULL,
-  `scope` varchar(255) DEFAULT NULL,
-  `grantTypes` varchar(255) DEFAULT NULL,
-  `redirectUrl` varchar(255) DEFAULT NULL,
-  `authorities` varchar(255) DEFAULT NULL,
-  `access_token_validity` int(11) DEFAULT NULL,
-  `refresh_token_validity` int(11) DEFAULT NULL,
-  `additionalInformation` varchar(4096) DEFAULT NULL,
-  `autoApproveScopes` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`appId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-LOCK TABLES `ClientDetails` WRITE;
-UNLOCK TABLES;
-
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -64,54 +45,6 @@ LOCK TABLES `doctor` WRITE;
 INSERT INTO `doctor` VALUES (1,'PHYSICIAN','2018-11-21 10:00:01','2018-11-21 10:00:01',1);
 INSERT INTO `doctor` VALUES (2,'PHYSICIAN','2018-11-21 10:00:01','2018-11-21 10:00:01',3);
 UNLOCK TABLES;
-
--- DROP TABLE IF EXISTS `health_centre`;
--- CREATE TABLE `health_centre` (
---   `id` bigint(20) NOT NULL AUTO_INCREMENT,
---   `name` varchar(100) NOT NULL,
---   `address` varchar(200) NOT NULL,
---   `city_code` varchar(20) NOT NULL,
---   `state_code` varchar(20) NOT NULL,
---   `country_code` varchar(20) NOT NULL,
---   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
---   `last_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
---   PRIMARY KEY (`id`)
--- ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
---
--- LOCK TABLES `health_centre` WRITE;
--- UNLOCK TABLES;
-
--- DROP TABLE IF EXISTS `doctor_location`;
--- CREATE TABLE `doctor_location` (
---   `id` bigint(20) NOT NULL AUTO_INCREMENT,
---   `doctor_id` bigint(20) NOT NULL,
---   `address_id` bigint(20) NOT NULL,
---   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
---   `last_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
---   PRIMARY KEY (`id`),
---   KEY `doctor_location_id_fk` (`doctor_id`),
---   KEY `address_id_fk` (`address_id`),
---   CONSTRAINT `address_id_fk` FOREIGN KEY (`address_id`) REFERENCES `health_centre` (`id`),
---   CONSTRAINT `doctor_location_id_fk` FOREIGN KEY (`doctor_id`) REFERENCES `doctor` (`id`)
--- ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
-
--- LOCK TABLES `doctor_location` WRITE;
--- UNLOCK TABLES;
-
--- DROP TABLE IF EXISTS `doctor_qualification`;
--- CREATE TABLE `doctor_qualification` (
---   `id` bigint(20) NOT NULL AUTO_INCREMENT,
---   `doctor_id` bigint(20) NOT NULL,
---   `degree_code` varchar(10) NOT NULL DEFAULT 'mbbs',
---   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
---   `last_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
---   PRIMARY KEY (`id`),
---   KEY `doctor_id_fk` (`doctor_id`),
---   CONSTRAINT `doctor_id_fk` FOREIGN KEY (`doctor_id`) REFERENCES `doctor` (`id`)
--- ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
---
--- LOCK TABLES `doctor_qualification` WRITE;
--- UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `oauth_access_token`;
 CREATE TABLE `oauth_access_token` (

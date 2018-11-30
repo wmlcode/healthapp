@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7352e67b-fa39-46f1-b5c0-c5701ed6037c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/dc6e0915-30a6-4428-82e5-d036de2f2738.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/dc6e0915-30a6-4428-82e5-d036de2f2738.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/configuration/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/configuration/AppConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/controllers/UserAccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/controllers/UserAccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/repositories/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/repositories/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/services/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/services/DoctorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/services/DoctorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/services/DoctorServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/services/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/services/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,11 +46,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserAccountController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserAccountController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/controllers/UserAccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-30">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="345">
+              <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/configuration/AppConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,6 +111,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schema.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
             </state>
           </provider>
         </entry>
@@ -211,14 +227,14 @@
         <option value="$PROJECT_DIR$/src/test/java/ru/lanit/healthapp/UserAccountControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/model/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/configuration/AuthServerOAuth2Config.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/schema.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/configuration/AppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/services/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/repositories/UserDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/repositories/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/dto/UserDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/controllers/UserAccountController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/services/DoctorServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/controllers/UserAccountController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/configuration/AppConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/schema.sql" />
       </list>
     </option>
   </component>
@@ -597,7 +613,7 @@
       <workItem from="1543240360353" duration="16311000" />
       <workItem from="1543401067610" duration="8198000" />
       <workItem from="1543419460980" duration="30295000" />
-      <workItem from="1543576515716" duration="2357000" />
+      <workItem from="1543576515716" duration="3334000" />
     </task>
     <servers />
   </component>
@@ -634,7 +650,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57161000" />
+    <option name="totallyTimeSpent" value="58138000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1922" height="1081" extended-state="6" />
@@ -646,11 +662,11 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.122732125" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.122732125" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.41422594" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.41422594" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32845187" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
@@ -658,7 +674,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.3291536" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30648535" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30648535" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3291536" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3291536" />
       <window_info id="Persistence" order="2" side_tool="true" />
@@ -911,13 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://dc6e0915-30a6-4428-82e5-d036de2f2738/schema/healthapp/table/oauth_access_token">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -929,17 +938,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/configuration/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="74" column="25" lean-forward="true" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1295#1326#1" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1054,11 +1052,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/controllers/UserAccountController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="345">
+          <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/lanit/healthapp/configuration/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
         </state>
       </provider>
     </entry>

@@ -29,11 +29,11 @@ public class AppConfig {
 	@Value("${spring.datasource.username}") String username;
 	@Value("${spring.datasource.password}") String password;
 	
-//	@Value("classpath:schema.sql")
-//    private Resource schemaScript;
-//
-//    @Value("classpath:data.sql")
-//    private Resource dataScript;
+	@Value("classpath:schema.sql")
+    private Resource schemaScript;
+
+    @Value("classpath:data.sql")
+    private Resource dataScript;
 	    
 	@Bean(name = "dataSource")
 	public DataSource getDataSource() {
@@ -70,8 +70,8 @@ public class AppConfig {
 
     private DatabasePopulator databasePopulator() {
         final ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
-//        populator.addScript(schemaScript);
-//        populator.addScript(dataScript);
+        populator.addScript(schemaScript);
+        populator.addScript(dataScript);
         return populator;
     }
 } 
