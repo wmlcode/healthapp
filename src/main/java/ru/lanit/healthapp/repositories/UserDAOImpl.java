@@ -12,11 +12,10 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import ru.lanit.healthapp.dto.UserDTO;
 import ru.lanit.healthapp.model.User;
 
 @Repository
-@Transactional(propagation=Propagation.MANDATORY)
+@Transactional(propagation=Propagation.REQUIRED)
 public class UserDAOImpl implements UserDAO {
 
 	private SessionFactory sessionFactory;

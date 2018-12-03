@@ -51,7 +51,7 @@ public class UserAccountController {
 		} catch (Exception e) {
 		}
 		if(user != null) {
-			return new ExecutionStatus("USER_ACCOUNT_EXISTS", "User account with same email address exists. Please try again!");
+			return new ExecutionStatus("USER_ACCOUNT_EXISTS", "User account with same email address exists. Please try again!", user);
 		}
 		user = new User();
 		user.setEmail(reqUser.getEmail());
@@ -92,7 +92,7 @@ public class UserAccountController {
 		user.setAge(reqUser.getAge());
 		user.setGender(reqUser.getGender());
 		userService.update(user);
-		return new ExecutionStatus("USER_ACCOUNT_UPDATED", "User account successfully updated");
+		return new ExecutionStatus("USER_ACCOUNT_UPDATED", "User account successfully updated", user);
 	}
 
 	@PostMapping(value="/update", produces="application/json")
