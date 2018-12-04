@@ -51,7 +51,7 @@ public class UserAccountController {
 		} catch (Exception e) {
 		}
 		if(user != null) {
-			return new ExecutionStatus("USER_ACCOUNT_EXISTS", "User account with same email address exists. Please try again!", user);
+			return new ExecutionStatus("USER_ACCOUNT_EXISTS", "User account with same email address exists. Please try again!");
 		}
 		user = new User();
 		user.setEmail(reqUser.getEmail());
@@ -112,9 +112,10 @@ public class UserAccountController {
 			e.printStackTrace();
 		}
 		if(user != null) {
-			
-		}	
-		model.addAttribute("message", "An email notification is sent to the registered email address.");
+			model.addAttribute("message", "An email notification is sent to the registered email address.");
+		} else {
+			model.addAttribute("message", "The user with the specified email does not exist.");
+		}
 		return new ModelAndView("forgotpassword", model);
 	}
 }

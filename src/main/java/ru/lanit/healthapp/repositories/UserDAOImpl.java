@@ -29,7 +29,7 @@ public class UserDAOImpl implements UserDAO {
     @Override
 	public List<User> findByEmail(String email) {
     	Session session = this.sessionFactory.getCurrentSession();
-        TypedQuery<User> query = session.getNamedQuery("findByEmail");  
+        TypedQuery<User> query = session.getNamedQuery("findByEmail");
         query.setParameter("email", email);
         return query.getResultList();
 	}

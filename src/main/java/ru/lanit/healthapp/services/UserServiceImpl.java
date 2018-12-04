@@ -34,13 +34,13 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User doesUserExist(String email) {
 		List<User> users = userDAO.findByEmail(email);
-		return users.get(0);
+		return users.size() == 1 ? users.get(0) : null;
 	}
 
 	@Override
 	public User isValidUser(String email, String password) {
 		List<User> users = userDAO.findByEmailAndPassword(email, password);
-		return users.get(0);
+		return users.size() == 1 ? users.get(0) : null;
 	}
 
 	@Override

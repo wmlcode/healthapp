@@ -23,12 +23,12 @@ import lombok.ToString;
 @NamedQueries({
     @NamedQuery(
         name = "findByEmail",
-        query = "from User u where u.email = :email"
-        ),
+        query = "FROM User u WHERE u.email = :email"
+	),
     @NamedQuery(
     	name = "findByEmailAndPassword",
-    	query = "from User u where u.email= :email and u.password = :password"
-    	),
+    	query = "FROM User u WHERE u.email= :email AND u.password = :password"
+	),
 })
 public class User {
 	

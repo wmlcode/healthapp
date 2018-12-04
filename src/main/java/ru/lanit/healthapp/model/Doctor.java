@@ -27,20 +27,20 @@ import lombok.ToString;
 @NamedQueries({
     @NamedQuery(
         name = "findBySpeciality",
-        query = "from Doctor u where u.specialityCode = :specialityCode"
-        ),
+        query = "FROM Doctor u WHERE u.specialityCode = :specialityCode"
+    ),
     @NamedQuery(
-            name = "findAll",
-            query = "from Doctor"
-            ),
+        name = "findAll",
+        query = "FROM Doctor"
+    ),
     @NamedQuery(
-            name = "findAllCount",
-            query = "select count(d) from Doctor d"
-            ),
+        name = "findAllCount",
+        query = "SELECT count(d) FROM Doctor d"
+    ),
     @NamedQuery(
-            name = "findById",
-            query = "from Doctor d where d.user.id = :id"
-            ),
+        name = "findById",
+        query = "FROM Doctor d WHERE d.user.id = :id"
+    ),
 })
 public class Doctor  implements java.io.Serializable {
 	
