@@ -19,7 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import ru.lanit.healthapp.dto.UserDTO;
 import ru.lanit.healthapp.model.User;
-import ru.lanit.healthapp.helpers.ExecutionStatus;
+import ru.lanit.healthapp.utils.ExecutionStatus;
 import ru.lanit.healthapp.services.DoctorService;
 import ru.lanit.healthapp.services.UserService;
 
@@ -73,7 +73,7 @@ public class UserAccountController {
 			docService.addDoctor(user, reqUser.getSpecialityCode());
 		}
 		
-		return new ExecutionStatus("USER_ACCOUNT_CREATED", "User account successfully created");
+		return new ExecutionStatus("USER_ACCOUNT_CREATED", "User account successfully created", user);
 	}
 	
 	@PostMapping(value="/user/update")

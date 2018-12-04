@@ -5,11 +5,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import ru.lanit.healthapp.model.Doctor;
 import ru.lanit.healthapp.model.User;
 import ru.lanit.healthapp.repositories.DoctorDAO;
 
 @Service
+@Transactional(propagation=Propagation.REQUIRED)
 public class DoctorServiceImpl implements DoctorService {
 	
 	private DoctorDAO doctorDAO;

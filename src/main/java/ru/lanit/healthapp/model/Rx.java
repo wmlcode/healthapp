@@ -27,12 +27,12 @@ import lombok.ToString;
 @NamedQueries({
     @NamedQuery(
         name = "findByDoctorId",
-        query = "from Rx r where r.doctor.user.id = :id"
-        ),
+        query = "FROM Rx r WHERE r.doctor.user.id = :id"
+    ),
     @NamedQuery(
 		name = "findByUserId",
-		query = "from Rx r where r.user.id = :id"
-		),
+		query = "FROM Rx r WHERE r.user.id = :id"
+	),
 })
 public class Rx {
 	

@@ -42,7 +42,7 @@ import lombok.ToString;
         query = "FROM Doctor d WHERE d.user.id = :id"
     ),
 })
-public class Doctor  implements java.io.Serializable {
+public class Doctor implements java.io.Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	

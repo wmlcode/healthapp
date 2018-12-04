@@ -22,7 +22,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import ru.lanit.healthapp.controllers.UserAccountController;
 import ru.lanit.healthapp.model.User;
-import ru.lanit.healthapp.helpers.ExecutionStatus;
+import ru.lanit.healthapp.utils.ExecutionStatus;
 import ru.lanit.healthapp.services.DoctorService;
 import ru.lanit.healthapp.services.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import ru.lanit.healthapp.model.Doctor;
-import ru.lanit.healthapp.helpers.DoctorInfo;
+import ru.lanit.healthapp.utils.DoctorInfo;
 import ru.lanit.healthapp.services.DoctorService;
 
 @RestController
