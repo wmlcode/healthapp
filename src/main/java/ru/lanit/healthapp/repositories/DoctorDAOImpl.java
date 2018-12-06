@@ -41,19 +41,6 @@ public class DoctorDAOImpl implements DoctorDAO {
         return doctors.get(0);
 	}
 
-
-	@Override
-	public List<Doctor> findByLocation(String location) {
-		return null;
-	}
-
-	@Override
-	public List<Doctor> findByHospital(String hospitalName) {
-//		Session session = this.sessionFactory.getCurrentSession();
-//        TypedQuery<Doctor> query = session.getNamedQuery("findByHospital");  
-		return null;
-	}
-
 	@Override
 	public List<Doctor> findAll() {
 		Session session = this.sessionFactory.getCurrentSession();

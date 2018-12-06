@@ -12,11 +12,7 @@ public interface DoctorDAO {
 	List<Doctor> findBySpecialityCode(String code);
 	
 	int findAllCount();
-	
-	List<Doctor> findByLocation(String location);
-	
-	List<Doctor> findByHospital(String hospitalName);
-	
+
 	Doctor findByUserId(int userId);
 
 	Doctor save(Doctor doctor);
